@@ -1,0 +1,23 @@
+# 改行コードの扱い
+#   テキストファイルはリポジトリ内では LF で保存し、
+#   チェックアウト時に各 PC の設定（Windows なら CRLF）へ変換する。
+* text=auto
+
+# テキストとして扱うファイル（自動判定に任せず明示する）
+*.cpp       text diff=cpp
+*.h         text diff=cpp
+*.py        text diff=python
+*.md        text diff=markdown
+*.txt       text
+*.json      text
+CMakeLists.txt text
+*.cmake     text
+
+# バイナリとして扱うファイル（改行変換も差分表示もしない）
+*.wav       binary
+*.ogg       binary
+*.mp3       binary
+*.png       binary
+*.jpg       binary
+*.bmp       binary
+*.ttf       binary
